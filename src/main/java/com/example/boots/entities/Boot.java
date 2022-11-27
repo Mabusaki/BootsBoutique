@@ -3,9 +3,11 @@ package com.example.boots.entities;
 
 import com.example.boots.enums.BootType;
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "BOOTS")
+@Data
 public class Boot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,44 +22,4 @@ public class Boot {
     private Integer quantity;
     @Column(name = "MATERIAL")
     private String material;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public BootType getType() {
-        return type;
-    }
-
-    public void setType(BootType type) {
-        this.type = type;
-    }
-
-    public Float getSize() {
-        return size;
-    }
-
-    public void setSize(Float size) {
-        this.size = size;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getMaterial() {
-        return material;
-    }
-
-    public void setMaterial(String material) {
-        this.material = material;
-    }
 }

@@ -4,9 +4,10 @@ import com.example.boots.entities.Boot;
 import com.example.boots.enums.BootType;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public interface BootRepository extends CrudRepository<Boot, Integer> {
 
     List<Boot> findBootBySize(Float size);
